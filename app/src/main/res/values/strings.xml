@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">NoteNote</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_compose">Compose</string>
+
+    <string name="hint_title">Title</string>
+    <string name="hint_content">Content</string>
+    <string name="default_title">Title</string>
+    <string name="default_content">Content</string>
+
+    <string name="extra_note_id">com.example.carl.notenote.NOTE_ID</string>
+
+    <string name="action_compose">Compose</string>
+    <string name="action_discard_item">Discard</string>
+</resources>

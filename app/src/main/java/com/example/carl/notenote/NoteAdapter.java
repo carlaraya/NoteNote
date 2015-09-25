@@ -61,9 +61,6 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
     public NoteAdapter(List<Note> dataset) {
         this.dataset = dataset;
 
-        for (int i = 0; i < dataset.size(); i++) {
-            Log.d("NOTENOTE", dataset.get(i).title);
-        }
     }
 
     @Override

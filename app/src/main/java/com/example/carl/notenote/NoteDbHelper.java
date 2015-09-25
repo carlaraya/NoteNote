@@ -79,12 +79,7 @@ public class NoteDbHelper extends SQLiteOpenHelper {
             c.moveToFirst();
         }
 
-        Note note = new Note();
-
-        note.id = Integer.parseInt(c.getString(0));
-        note.title = c.getString(1);
-        note.content = c.getString(2);
-
+        Note note = new Note(Integer.parseInt(c.getString(0)), c.getString(1),  c.getString(2));
         c.close();
 
         return note;
@@ -110,13 +105,25 @@ public class NoteDbHelper extends SQLiteOpenHelper {
         );
 
         Note note;
+        //*
+        String title;
+        String content;
+        //*/
 
         if (c.moveToFirst()) {
             do {
-                note = new Note();
-                note.id = Integer.parseInt(c.getString(0));
-                note.title = c.getString(1);
-                note.content = c.getString(2);
+                //*
+                title = c.getString(1);
+                content = c.getString(2);
+
+                if (title.length() == 0) {
+                    title = "(no title)";
+                }
+                if (content.length() == 0) {
+                    content = "(no content)";
+                }
+                //*/
+                note = new Note(Integer.parseInt(c.getString(0)), title, content);
                 notes.add(note);
             } while (c.moveToNext());
         }

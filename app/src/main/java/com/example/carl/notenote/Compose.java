@@ -91,10 +91,9 @@ public class Compose extends AppCompatActivity {
 
     void saveData() {
         NoteDbHelper db = new NoteDbHelper(this);
-        Note note = new Note();
-        note.id = noteIndex;
-        note.title = titleEditText.getText().toString();
-        note.content = contentEditText.getText().toString();
+        Note note = new Note(noteIndex,
+                titleEditText.getText().toString(),
+                contentEditText.getText().toString());
 
         if (noteIndex > -1) {
             db.updateNote(note);

@@ -13,8 +13,9 @@ public class Note {
         // nothing
     }
 
-    public Note(String title, String content) {
+    public Note(int id, String title, String content) {
         super();
+        this.id = id;
         this.title = title;
         this.content = content;
     }
